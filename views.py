@@ -1,8 +1,7 @@
 from django.shortcuts import render
-from .forms import MyForm
+from django.http import HttpResponse
 
-def form(request):
-    form= Myform()
-    return render(request,"form.html",{'form':form})
+def hello_world(request):
+    return HttpResponse("Hello World!!")
 
 # Create your views here.
